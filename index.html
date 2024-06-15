@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор тривалості роботи</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Калькулятор тривалості роботи</h1>
+
+  <div id="input-container">
+    <label for="tasks">Дані завдань (формат JSON):</label><br>
+    <textarea id="tasks" rows="5" cols="50" placeholder='[{"Назва": "Завдання A", "резерв": 5}, {"назва": "Завдання B", "резерв": 7}, ...]'></textarea><br>
+    <button onclick="calculateDuration()">Розрахувати тривалість</button>
+  </div>
+
+  <div id="output-container">
+    <h2>Загальна тривалість роботи:</h2>
+    <p id="total-duration"></p>
+
+    <h2>Список завдань:</h2>
+    <ul id="tasks-list"></ul>
+
+    <h2>Діаграма Ганта:</h2>
+    <pre id="gantt-chart"></pre>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
